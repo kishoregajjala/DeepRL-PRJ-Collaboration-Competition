@@ -5,17 +5,15 @@ This repository has my work for the Udacity's Deep Reinforcement Learning Nanode
 ## Project Details
 
 ### Project Description
-For this project, we will train an agent (robot with double-jointed arm) to move (it’s arm) to target locations.  The goal of the agent is to maintain its position at the target location for as many time steps as possible.
+In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a positive reward. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a negative reward. Thus, the goal of each agent is to keep the ball in play.
 
 ### Reward
-A reward of +0.1 is provided for each step that the agent’s hand is in the goal location. 
-Observation (State) Space
-The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. 
+In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01.  
 
-### Action
-Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+### Observation Space and Action
+The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. 
 
-The action space is continuous, which allows each agent to execute more complex and precise movements. There's an unlimited range of possible action values to control the robotic arm, whereas the agent with discrete action space was limited to four discrete actions: left, right, forward, backward.
+The action space is continuous, which allows each agent to execute more complex and precise movements. There's an unlimited range of possible action values to control the rocket. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
 ### Project Goal
 The goal of the agent is to maintain its position at the target location for as many time steps as possible. The task is episodic, and in order to solve the environment, your agent must get an average score of +30 over 100 consecutive episodes.
