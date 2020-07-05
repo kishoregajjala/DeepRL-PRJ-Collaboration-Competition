@@ -16,7 +16,12 @@ The observation space consists of 8 variables corresponding to the position and 
 The action space is continuous, which allows each agent to execute more complex and precise movements. There's an unlimited range of possible action values to control the rocket. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
 ### Project Goal
-The goal of the agent is to maintain its position at the target location for as many time steps as possible. The task is episodic, and in order to solve the environment, your agent must get an average score of +30 over 100 consecutive episodes.
+The goal of each agent is to keep the ball in play. The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
+
+* After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores.
+* This yields a single score for each episode.
+
+The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
 ## The Environment
 The details are taken from the Udacity's Deep Reinforcement Learning Nanodegree program. The environment is based on Unity ML-agents. Please read more about ML-Agents by perusing the GitHub repository.
